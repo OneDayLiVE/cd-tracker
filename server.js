@@ -144,9 +144,9 @@ app.post("/api/visitors", function(req, res) {
   var newVisitor = req.body;
   newVisitor.createDate = new Date();
 
-  if (!req.body.CDTracker) {
+  if (typeof req.body.CDTracker === "undefined") {
     handleError(res, "Invalid CD Tracker input", "Must provide a CD Tracker.", 400);
-  } else if (!req.body.UserAgent) {
+  } else if (typeof req.body.UserAgent === "undefined") {
     handleError(res, "Invalid User Agent input", "Must provide a User Agent.", 400);
   } else {
     db.collection(VISITORS_COLLECTION).insertOne(newVisitor, function(err, doc) {
