@@ -1,6 +1,6 @@
 {
   "name": "cd-tracker",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -43,5 +43,20 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneDayLiVE/cd-tracker.git"
+  },
+  "author": "Bradford Knowlton",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/OneDayLiVE/cd-tracker/issues"
+  },
+  "homepage": "https://github.com/OneDayLiVE/cd-tracker#readme",
+  "engines": {
+    "node": "10.x"
   }
 }
