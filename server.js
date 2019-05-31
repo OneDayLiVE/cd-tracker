@@ -144,8 +144,10 @@ app.post("/api/visitors", function(req, res) {
   var newVisitor = req.body;
   newVisitor.createDate = new Date();
 
-  if (!req.body.name) {
-    handleError(res, "Invalid user input", "Must provide a name.", 400);
+  if (!req.body.CDTracker) {
+    handleError(res, "Invalid CD Tracker input", "Must provide a CD Tracker.", 400);
+  } else if (!req.body.UserAgent) {
+    handleError(res, "Invalid User Agent input", "Must provide a User Agent.", 400);
   } else {
     db.collection(VISITORS_COLLECTION).insertOne(newVisitor, function(err, doc) {
       if (err) {
