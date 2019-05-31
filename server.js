@@ -11,7 +11,6 @@ var VISITORS_COLLECTION = "visitors";
 
 var app = express();
 app.use(cors());
-app.use(allowCrossDomain);
 
 app.use(bodyParser.json());
 
